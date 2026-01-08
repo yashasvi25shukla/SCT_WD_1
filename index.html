@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SkillCraft Technologies</title>
+
+<style>
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+header.scrolled {
+    padding: 12px 60px;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.25);
+}
+
+/* ===== LOGO ===== */
+.logo-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00f2fe;
+}
+
+.tagline {
+    font-size: 12px;
+    color: #c9f7ff;
+}
+
+/* ===== MENU ===== */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 0;
+    transition: 0.3s;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    transition: 0.4s;
+    border-radius: 10px;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #00f2fe;
+}
+
+/* ===== CTA BUTTON ===== */
+.cta-btn {
+    padding: 10px 22px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    color: #0f2027;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.9);
+}
+
+/* ===== SECTIONS ===== */
+section {
+    min-height: 100vh;
+    padding: 140px 60px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ===== CARD STYLING ===== */
+.card-container {
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 280px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    transition: 0.4s ease;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+}
+
+.card h3 {
+    color: #00f2fe;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ===== CARD HOVER ===== */
+.card:hover {
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    color: #0f2027;
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(0, 242, 254, 0.6);
+}
+
+.card:hover h3 {
+    color: #0f2027;
+}
+
+/* ===== BACKGROUNDS ===== */
+#home {
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+}
+
+#about {
+    background: linear-gradient(120deg, #1c2a4a, #223a5e);
+}
+
+#services {
+    background: linear-gradient(120deg, #243b55, #141e30);
+}
+
+#contact {
+    background: linear-gradient(120deg, #16213e, #0f3460);
+}
+
+/* ===== TEXT ===== */
+h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+p {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header id="navbar">
+    <div class="logo-box">
+        <div class="logo">SkillCraft Technologies</div>
+        <div class="tagline">Innovate • Learn • Build the Future</div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Solutions</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <a href="#contact" class="cta-btn">Get Started</a>
+</header>
+
+<!-- ===== HOME ===== -->
+<section id="home">
+    <h1>Empowering Skills. Driving Innovation.</h1>
+    <p>Where learning meets real-world technology and career growth.</p>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Hands-On Internships</h3>
+            <p>Learn by doing with real projects guided by industry experts.</p>
+        </div>
+        <div class="card">
+            <h3>Modern Skill Training</h3>
+            <p>Master trending technologies demanded by top companies.</p>
+        </div>
+        <div class="card">
+            <h3>Career-Ready Learning</h3>
+            <p>Build confidence, portfolios, and professional experience.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+    <h1>Who We Are</h1>
+    <p>A team committed to shaping tomorrow’s tech professionals.</p>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Our Vision</h3>
+            <p>To empower learners with skills that create real impact.</p>
+        </div>
+        <div class="card">
+            <h3>Our Mission</h3>
+            <p>Bridging education and industry through innovation.</p>
+        </div>
+        <div class="card">
+            <h3>Our Values</h3>
+            <p>Integrity, growth, and continuous learning culture.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+    <h1>What We Offer</h1>
+    <p>Technology solutions and learning experiences that matter.</p>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Responsive, scalable, and modern web solutions.</p>
+        </div>
+        <div class="card">
+            <h3>AI & ML Projects</h3>
+            <p>Smart systems powered by data and intelligence.</p>
+        </div>
+        <div class="card">
+            <h3>Corporate Training</h3>
+            <p>Upskill teams with industry-focused programs.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+    <h1>Let’s Build Something Amazing</h1>
+    <p>Your journey towards innovation starts here.</p>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Connect With Us</h3>u
+            <p>Reach out for partnerships, training, or projects.</p>
+        </div>
+        <div class="card">
+            <h3>Join Our Community</h3>
+            <p>Be part of a growing network of tech innovators.</p>
+        </div>
+        <div class="card">
+            <h3>Start Your Journey</h3>
+            <p>Turn your passion into a powerful career.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== JS ===== -->
+<script>
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 80) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+</script>
+
+</body>
+</html>
